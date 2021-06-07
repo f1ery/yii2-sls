@@ -5,6 +5,12 @@
   "homepage": "",
   "type": "project",
   "license": "BSD-3-Clause",
+  "authors": [
+    {
+      "name": "f1ery",
+      "role": "Original Maintainer"
+    }
+  ],
   "support": {
     "issues": "",
     "forum": "",
@@ -12,7 +18,7 @@
     "irc": "irc://irc.freenode.net/yii",
     "source": "https://github.com/f1ery/yii2-sls"
   },
-  "minimum-stability": "dev",
+  "minimum-stability": "stable",
   "require": {
     "php": ">=7.3.0",
     "yiisoft/yii2": "2.0.15"
@@ -27,6 +33,11 @@
   },
   "autoload": {
   },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0.1-dev"
+    }
+  },
   "repositories": [
     {
       "type": "composer",
@@ -34,3 +45,4 @@
     }
   ]
 }
+

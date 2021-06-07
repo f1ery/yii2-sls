@@ -2,7 +2,7 @@
 
 
 ## API版本
-0.0.1
+1.0.1
 
 
 ## 组件发布日期
@@ -23,7 +23,7 @@ composer require --prefer-dist qimao/yii2-sls
 
 方法二：添加composer.json配置文件
 
-"qimao/yii2-sls": "*"
+"qimao/yii2-sls": "~1.0.0"
 
 
 ## Environment Requirement
