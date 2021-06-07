@@ -1,0 +1,36 @@
+{
+  "name": "qimao/yii2-sls",
+  "description": "Yii2 sls project",
+  "keywords": ["yii2", "sls"],
+  "homepage": "",
+  "type": "project",
+  "license": "BSD-3-Clause",
+  "support": {
+    "issues": "",
+    "forum": "",
+    "wiki": "",
+    "irc": "irc://irc.freenode.net/yii",
+    "source": "https://github.com/f1ery/yii2-sls"
+  },
+  "minimum-stability": "stable",
+  "require": {
+    "php": ">=7.3.0",
+    "yiisoft/yii2": "2.0.15",
+  },
+  "require-dev": {
+  },
+  "config": {
+    "process-timeout": 1800,
+    "fxp-asset": {
+      "enabled": false
+    }
+  },
+  "autoload": {
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    }
+  ]
+}
