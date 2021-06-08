@@ -17,7 +17,7 @@
     "forum": "",
     "wiki": "",
     "irc": "irc://irc.freenode.net/yii",
-    "source": "https://codeup.aliyun.com/qimao/php-contrib/yii2-sls"
+    "source": "https://github.com/f1ery/yii2-sls"
   },
   "minimum-stability": "stable",
   "require": {
