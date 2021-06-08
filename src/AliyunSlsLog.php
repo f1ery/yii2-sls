@@ -6,7 +6,7 @@
  * Time: 下午2:07
  */
 
-namespace qimao\sls;
+namespace f1ery\sls;
 
 use Yii;
 

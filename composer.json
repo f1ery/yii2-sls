@@ -1,5 +1,5 @@
 {
-  "name": "qimao_f1ery/yii2-sls",
+  "name": "f1ery/yii2-sls",
   "description": "Yii2 sls project",
   "keywords": ["yii2", "sls"],
   "homepage": "",
@@ -8,7 +8,8 @@
   "authors": [
     {
       "name": "f1ery",
-      "role": "Original Maintainer"
+      "role": "Original Maintainer",
+      "email": "edgedroper"
     }
   ],
   "support": {
@@ -16,14 +17,17 @@
     "forum": "",
     "wiki": "",
     "irc": "irc://irc.freenode.net/yii",
-    "source": "https://github.com/f1ery/yii2-sls"
+    "source": "https://codeup.aliyun.com/qimao/php-contrib/yii2-sls"
   },
   "minimum-stability": "stable",
   "require": {
     "php": ">=7.3.0",
-    "yiisoft/yii2": "2.0.15"
+    "yiisoft/yii2": "~2.0.15"
   },
-  "require-dev": {
+  "autoload": {
+    "psr-4": {
+      "f1ery\\sls\\": "src"
+    }
   },
   "config": {
     "process-timeout": 1800,
@@ -31,11 +35,9 @@
       "enabled": false
     }
   },
-  "autoload": {
-  },
   "extra": {
     "branch-alias": {
-      "dev-master": "1.0.1-dev"
+      "dev-master": "1.0.2-dev"
     }
   },
   "repositories": [
