@@ -18,7 +18,7 @@ API Reference: (https://help.aliyun.com/document_detail/29007.html)
 ## 安装
 方法一：通过composer包的安装方法
 
-composer require --prefer-dist qimao/yii2-sls
+composer require qimao/yii2-sls
 
 
 方法二：添加composer.json配置文件
