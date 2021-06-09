@@ -139,7 +139,7 @@ class AliyunSlsLog
     }
 
     /**
-     * 列出logstore列表
+     * 列出此project下的logstore列表
      *
      * @param string $project
      * @return \Aliyun_Log_Models_ListLogstoresResponse
@@ -253,7 +253,7 @@ class AliyunSlsLog
     }
 
     /**
-     * 获取某个logstore下logs(100条)
+     * 获取一天内(86400s)某个logstore下logs(前100条)
      *
      * @param string $logstore
      * @throws \Aliyun_Log_Exception
@@ -265,13 +265,13 @@ class AliyunSlsLog
         $listShardRequest = new \Aliyun_Log_Models_ListShardsRequest($this->project, $logstore);
         $listShardResponse = $this->client->listShards($listShardRequest);
         foreach ($listShardResponse->getShardIds() as $shardId) {
-            $getCursorRequest = new \Aliyun_Log_Models_GetCursorRequest($this->project, $logstore, $shardId, null, time() - 60);
+            $getCursorRequest = new \Aliyun_Log_Models_GetCursorRequest($this->project, $logstore, $shardId, null, time() - 86400);
             $response = $this->client->getCursor($getCursorRequest);
             $cursor = $response->getCursor();
             $count = 100;
             while (true) {
                 $batchGetDataRequest = new \Aliyun_Log_Models_BatchGetLogsRequest($this->project, $logstore, $shardId, $count, $cursor);
-                logVarDump($batchGetDataRequest);
+                Yii::error(json_encode($batchGetDataRequest));
                 $response = $this->client->batchGetLogs($batchGetDataRequest);
                 if ($cursor == $response->getNextCursor()) {
                     break;
@@ -330,7 +330,7 @@ class AliyunSlsLog
                     }
                 }
                 $nextCursor = $response->getNextCursor();
-                print("batchGetLogs once, cursor: " . $cursor . ", nextCursor: " . nextCursor . ", logGroups: " . $logGroupCount . ", logs: " . $logCount . "\n");
+                print("batchGetLogs once, cursor: " . $cursor . ", nextCursor: " . $nextCursor . ", logGroups: " . $logGroupCount . ", logs: " . $logCount . "\n");
                 if ($cursor == $nextCursor) {
                     //read data finished
                     break;
